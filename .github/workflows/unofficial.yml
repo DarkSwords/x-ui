@@ -89,13 +89,13 @@ jobs:
       #     cache-from: type=gha
       #     cache-to: type=gha,mode=max
 
-      - name: Sync README.md
-        uses: ms-jpq/sync-dockerhub-readme@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
-          readme: "./docs/README_zh.md"
+      # - name: Sync README.md
+      #   uses: ms-jpq/sync-dockerhub-readme@v1
+      #  with:
+      #    username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #    password: ${{ secrets.DOCKERHUB_TOKEN }}
+      #    repository: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
+      #    readme: "./docs/README_zh.md"
 
       - name: Move cache
         run: |
